@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.4s ease;
+}
+
+:root {
+    --primary-color: #d81b60;
+    --primary-dark: #880e4f;
+    --accent-color: #ff5722;
+    --bg-color: #fffde7;
+    --card-bg: #ffffff;
+    --text-color: #000000;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    border-bottom: 8px solid transparent;
+    border-image: linear-gradient(90deg, #d81b60 0%, #d81b60 25%, #ff5722 25%, #ff5722 50%, #ffeb3b 50%, #ffeb3b 75%, #00e5ff 75%, #00e5ff 100%) 10;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.container {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    border-top: 3px solid var(--accent-color);
+}
+
+.card h2 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    padding-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: var(--primary-color);
+}
+
+button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+.resultado-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #ffe0b2;
+    border-left: 5px solid var(--accent-color);
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.conclusion {
+    background-color: #f8bbd0;
+    border-top: 4px solid var(--primary-color);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #880e4f;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    :root {
+        --primary-color: #00e5ff;
+        --primary-dark: #006064;
+        --accent-color: #00b0ff;
+        --bg-color: #263238;
+        --card-bg: #37474f;
+        --text-color: #ffffff;
+    }
+
+    header {
+        border-bottom: 5px solid var(--primary-dark);
+        border-image: none;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        border-top: none;
+        border-left: 4px solid var(--primary-color);
+    }
+
+    .resultado-box {
+        background-color: #006064;
+        border-left-color: var(--primary-color);
+        color: #ffffff;
+    }
+
+    .conclusion {
+        background-color: #212121;
+        border-left: 4px solid var(--accent-color);
+    }
+    
+    footer {
+        color: #00e5ff;
+    }
+
+    input[type="number"] {
+        background-color: #263238;
+        border: 2px solid #00b0ff;
+        color: white;
+    }
+}
+
+@media (min-width: 1025px) {
+    :root {
+        --primary-color: #1b5e20;
+        --primary-dark: #003300;
+        --accent-color: #5d4037;
+        --bg-color: #efebe9;
+        --card-bg: #ffffff;
+        --text-color: #212121;
+    }
+
+    header {
+        border-bottom: 5px solid var(--accent-color);
+        border-image: none;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    .container {
+        margin: 3rem auto;
+    }
+
+    .card {
+        padding: 2rem;
+        border-top: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    button {
+        grid-column: span 2;
+        margin-top: 1rem;
+        width: 50%;
+        justify-self: center;
+    }
+
+    .resultado-box {
+        background-color: #e8f5e9;
+        border-left-color: var(--primary-color);
+        color: #212121;
+    }
+
+    .conclusion {
+        background-color: #d7ccc8;
+        border-top: 4px solid var(--accent-color);
+    }
+    
+    footer {
+        color: #5d4037;
+    }
+
+    input[type="number"] {
+        background-color: #ffffff;
+        border: 2px solid #e0e0e0;
+        color: #212121;
+    }
+}

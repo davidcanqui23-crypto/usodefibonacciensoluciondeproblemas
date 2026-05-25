@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Producción de Papa</title>
+    <link rel="stylesheet" href="css/estilos1.css">
+</head>
+<body>
+
+    <header>
+        <h1>Proyecto AgroMatemático: Sucesión Agrícola</h1>
+        <h2>Estudiante: David Canqui Cuz</h2>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Contexto del Problema</h2>
+            <p>
+                Optimizar la producción de papa en los huertos requiere proyecciones precisas para planificar la distribución y el almacenamiento. Cada huerto tiene un ciclo de maduración: durante su primer mes produce <strong>50 papas</strong>, el segundo mes aumenta a <strong>70 papas</strong>, y a partir del tercer mes se estabiliza en una producción constante de <strong>80 papas</strong> por mes.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Explicación del Algoritmo</h2>
+            <p>
+                Para resolver esto, utilizamos una variante de la lógica de <strong>Fibonacci</strong>. En lugar de sumar los dos meses anteriores directamente, el algoritmo evalúa el "historial" del huerto mes a mes. Registra dinámicamente el crecimiento mediante variables de estado ($mes_1$ y $mes_2$) para acumular la producción total en base al tiempo transcurrido y multiplicarlo por la cantidad de huertos activos.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Calculadora de Producción</h2>
+            <form id="formProduccion" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="meses">Cantidad de meses a evaluar:</label>
+                    <input type="number" id="meses" min="1" placeholder="Ej. 6" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="huertos">Cantidad de huertos cosechados:</label>
+                    <input type="number" id="huertos" min="1" placeholder="Ej. 3" required>
+                </div>
+
+                <button type="button" id="btnCalcular">Calcular Producción Total</button>
+            </form>
+
+            <div id="resultado" class="resultado-box hidden"></div>
+        </section>
+
+        <section class="card conclusion">
+            <h2>Conclusión Matemática</h2>
+            <p>
+                La matemática, y específicamente los modelos recursivos como Fibonacci, nos permiten predecir el comportamiento de sistemas biológicos estables. Al modelar el desfase de producción de los primeros meses, los agricultores pueden anticipar con precisión el rendimiento de sus tierras y tomar decisiones informadas sobre el suministro de alimentos.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Análisis de Producción Agrícola Automatizado</p>
+    </footer>
+
+    <script src="js/ej1.js"></script>
+</body>
+</html>
